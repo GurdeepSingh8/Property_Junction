@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_1"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_0"
+        android:text="+919876855231"
+        android:textColor="@color/text_hint" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:background="@color/background_0"
+        android:orientation="horizontal"
+        android:weightSum="24">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="6"
+            android:background="@drawable/round_4_holo"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="6">
+
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:padding="6dp"
+                android:src="@drawable/icon_whatsapp"
+                app:tint="@color/app_theme_color" />
+
+            <TextView
+                style="@style/body_when_heading_is_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Whatsapp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_marginHorizontal="3dp"
+            android:layout_weight="6"
+            android:background="@drawable/round_4_holo"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="6">
+
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:padding="6dp"
+                android:src="@drawable/img_phone_call"
+                app:tint="@color/app_theme_color" />
+
+            <TextView
+                style="@style/body_when_heading_is_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_marginHorizontal="3dp"
+            android:layout_weight="6"
+            android:background="@drawable/round_4_holo"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="6">
+
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:padding="6dp"
+                android:src="@drawable/img_properties_filled"
+                app:tint="@color/app_theme_color" />
+
+            <TextView
+                style="@style/body_when_heading_is_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Properties" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="6"
+            android:background="@drawable/round_4_holo"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="6">
+
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:padding="6dp"
+                android:src="@drawable/img_property_location"
+                app:tint="@color/app_theme_color" />
+
+            <TextView
+                style="@style/body_when_heading_is_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/tv_follow_up_txt"
+        style="@style/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@color/background_0"
+        android:gravity="start"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="12dp"
+        android:text="Follow up"
+        android:textColor="@color/text_body"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_follow_up"
+        style="@style/body_when_heading_is_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_0"
+        android:gravity="start"
+        android:paddingHorizontal="12dp"
+        android:paddingBottom="12dp"
+        android:text="No follow up scheduled"
+        android:textColor="@color/text_hint"
+        app:layout_constraintStart_toStartOf="@id/tv_follow_up_txt"
+        app:layout_constraintTop_toBottomOf="@+id/tv_follow_up_txt" />
+
+    <TextView
+        android:id="@+id/tv_notes_txt"
+        style="@style/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@color/background_0"
+        android:gravity="start"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="12dp"
+        android:text="Notes"
+        android:textColor="@color/text_body"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/body_when_heading_is_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_0"
+        android:gravity="start"
+        android:paddingHorizontal="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/notes_sample"
+        android:textColor="@color/text_hint"
+        app:layout_constraintStart_toStartOf="@id/tv_notes_txt"
+        app:layout_constraintTop_toBottomOf="@+id/tv_notes_txt" />
+
+    <TextView
+        android:id="@+id/tv_time_line_txt"
+        style="@style/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:background="@color/background_0"
+        android:layout_marginTop="6dp"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="12dp"
+        android:text="Timeline"
+        android:textColor="@color/text_body"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

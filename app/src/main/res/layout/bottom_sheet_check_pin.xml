@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottomsheet_background"
+    android:backgroundTint="@color/background_0"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_4"
+        android:backgroundTint="@color/background_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_lock"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_padlock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/app_theme_color" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lott_lock"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_lock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_lock"
+        app:lottie_progress="5"
+        app:lottie_rawRes="@raw/lock"
+        app:tint="@color/app_theme_color" />
+
+    <TextView
+        android:id="@+id/tv_head"
+        style="@style/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Property Junction\nis Locked"
+        app:layout_constraintTop_toBottomOf="@+id/iv_lock" />
+
+    <TextView
+        android:id="@+id/tv_header"
+        style="@style/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="Please enter your 6 digit OTP\nwe have sent on your registered email address"
+        android:textColor="@color/text_body"
+        app:layout_constraintTop_toBottomOf="@+id/tv_head" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_otp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:hint="Enter PIN"
+        app:boxBackgroundColor="@color/background_1"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxStrokeColor="@color/app_theme_color"
+        app:boxStrokeErrorColor="@color/red_g"
+        app:boxStrokeWidth="0dp"
+        app:errorTextColor="@color/red_g"
+        app:expandedHintEnabled="false"
+        app:hintTextAppearance="@style/small"
+        app:hintTextColor="@color/app_theme_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/heading"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:gravity="center|start"
+            android:importantForAutofill="no"
+            android:inputType="numberPassword"
+            android:letterSpacing="1.5"
+            android:maxLength="4"
+            android:paddingStart="12dp"
+            android:paddingEnd="60dp"
+            android:textColor="@color/text_body" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lott_otp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/et_otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/et_otp"
+        app:layout_constraintTop_toTopOf="@id/et_otp"
+        app:lottie_rawRes="@raw/corrrect" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lott_otp_wrong"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/et_otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/et_otp"
+        app:layout_constraintTop_toTopOf="@id/et_otp"
+        app:lottie_rawRes="@raw/wrong" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

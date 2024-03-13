@@ -1,0 +1,180 @@
+<resources>
+    <string name="app_name">Property Junction</string>
+
+    <string name="notes_sample">Facebook Lead via Property Junction
+Campaign: Gaurav_bhai_jannat_campaign
+Adset: Gaurav_bhai_jannat_ad_set
+Ad: Gaurav_bhai_jannat_ad
+
+Full Name: Pushpendra Singh
+Work Phone Number: +918607400760
+Phone Number: +918607400760</string>
+
+    <string name="content">With the idea of imparting programming
+      knowledge, Mr. Sandeep Jain, an IIT Roorkee alumnus started a
+      dream, GeeksforGeeks. Whether programming excites you or you feel
+      stifled, wondering how to prepare for interview questions or how to
+      ace data structures and algorithms, GeeksforGeeks is a one-stop solution.
+      With every tick of time, we are adding arrows in our quiver. From articles
+      on various computer science subjects to programming problems for practice,
+      from basic to premium courses, from technologies to entrance examinations,
+      we have been building ample content with superior quality. In a short span,
+      we have built a community of 1 Million+ Geeks around the world, 20,000+
+      Contributors and 500+ Campus Ambassadors in various colleges across the nation.
+      Our success stories include a lot of students who benefitted in their placements
+      and landed jobs at tech giants. Our vision is to build a gigantic network of
+      geeks and we are only a fraction of it yet.</string>
+
+    <!--for Firebase-->
+
+    <!--collection-->
+
+    <!--first colum-->
+    <string name="database">DataBase</string>
+    <string name="database_id">mCbkmnORO7l0evzAy46w</string>
+    <string name="data">Data</string>
+
+    <!--documents-->
+
+    <!--first colum-->
+    <string name="countries">countries</string>
+
+    <!--fields main_doc-->
+    <string name="version_code">version_code</string>
+    <string name="update_link">update_link</string>
+
+    <!--fields-->
+    <string name="counties_with_map_and_code">counties_with_map_and_code</string>
+
+    <!--Collections in database id-->
+    <string name="associates">Associates</string>
+
+    <!--fields in sp-->
+    <string name="user_profile_in_sp">USER_PROFILE</string>
+    <string name="sp_name">name</string>
+    <string name="sp_number">number</string>
+    <string name="sp_country_code">country_code</string>
+    <string name="sp_user_id">user_id</string>
+    <string name="sp_login_status">login_status</string>
+    <string name="logged_in">logged_in</string>
+    <string name="logged_out">logged_out</string>
+
+    <!--fields in associate profile-->
+    <string name="name">name</string>
+    <string name="number">number</string>
+    <string name="country_code">country_code</string>
+    <string name="recovery_email">recovery_email</string>
+    <string name="pin">pin</string>
+    <string name="default_pin">0000</string>
+    <string name="status">status</string>
+    <string name="address">address</string>
+    <string name="company">company</string>
+    <string name="designation">designation</string>
+    <string name="security_level">security_level</string>
+    <string name="last_login">last_login</string>
+    <string name="register_date">register_date</string>
+
+    <!--property types-->
+    <string name="plot">Plot</string>
+    <string name="flat">Flat</string>
+    <string name="house">House</string>
+    <string name="commercial_plot">Commercial Plot</string>
+    <string name="farm_house">Farm House</string>
+    <string name="shop">Shop</string>
+    <string name="row_house">Row House</string>
+    <string name="villa">Villa</string>
+    <string name="land">Land</string>
+    <string name="office">Office</string>
+
+    <!--fields in client followup-->
+    <string name="view">view</string>
+    <string name="client_added">client_added</string>
+    <string name="activity">activity</string>
+    <string name="add_activity">add_activity</string>
+    <string name="client_details">client_details</string>
+    <string name="call_log">call_log</string>
+
+    <!--location activity UI-->
+    <string name="choose_property_location">Choose Property location</string>
+    <string name="search_address_manually">Search Address Manually</string>
+    <string name="use_current_location">Use current location</string>
+    <string name="change_location">Change Address</string>
+    <string name="change_location_heading">2 Display address found</string>
+    <string name="change_location_heading_sub">Chose on of them or fill manually</string>
+    <string name="manual_address_hint">Add address manually</string>
+    <string name="fill_manually_heading">Add display address manually</string>
+    <string name="fill_manually_sub">this will not change the location you selected</string>
+
+    <!--add property UI-->
+    <string name="price_unit_array_for_plot">/ Sqft#/-</string>
+    <string name="price_unit_array_for_flat_sale">/-#/ Sqft</string>
+    <string name="price_unit_array_for_house_sale">/-</string>
+    <string name="price_unit_array_for_Land">/ Beegha#/-#/ Sqft</string>
+    <string name="for_sale">for Sale</string>
+    <string name="for_rent">for Rent</string>
+    <string name="details">Details</string>
+    <string name="price">Price</string>
+    <string name="price_default_helper">Enter full amount of property or select price unit accordingly.</string>
+    <string name="amenities">Amenities</string>
+    <string name="other">Other details (optional)</string>
+    <string name="amenities_placeholder_text">Add your property\'s amenities here… E.g.\nApprovals -\nSize -\nUnits -\netc…</string>
+    <string name="other_placeholder_text">Give a short brief about this property, its optional</string>
+    <string name="add_extra_field_heading">Add extra info for your team</string>
+    <string name="add_extra_field_sub_heading">This info will only visible to your calling team</string>
+    <string name="add_extra_field_hint">Extra information (optional)</string>
+    <string name="add_extra_field_place_holder">Add small details to answer client\'s frequent questions, E.g.\nProject owner name -\nOwner\'s previous projects -\nor Instructions to calling team…</string>
+
+    <!--add client UI-->
+    <string name="enter_client_name_hint">Client name</string>
+    <string name="enter_client_display_name_hint">Display name</string>
+    <string name="note_placeholder_text">Add notes about your client here…</string>
+    <string name="display_name_tips">Display name is what your client will see</string>
+    <string name="more_phone_number">More Phone Numbers</string>
+    <string name="remove_phone_number">Hide</string>
+    <string name="save">Save</string>
+    <string name="note">Note</string>
+    <string name="ok_got_it_btn_text">Got it</string>
+    <string name="client_name_brief">is only visible to you within the Property Junction app, and is never shown to your client. This is for easy searching and reference, and is usually the same as the contact name in your phonebook.</string>
+    <string name="display_name_brief">is what is shown to your clients on content that you send them, such as in your messages and files. Make sure the display name is acceptable to be seen by your client.</string>
+    <string name="pro_tip_client_name">Pro Tip: you can make the display name more formal (e.g. \'Mr. Manoj Kumar\') or casual (eg. \'Manoj Ji\') depending on your relationship with the client.</string>
+    <string name="save_in_contacts">Also save in Contacts</string>
+    <string name="save_in_contacts_helper">If you check the box, this client will be saved in your contact list with Client name.</string>
+
+    <!--login page-->
+    <string name="enter_otp_heading">Enter OTP</string>
+    <string name="login_heading">Partner Login</string>
+    <string name="login_body_text">We\'ll send you an OTP (One Time Password) on the same number</string>
+    <string name="change_number">Change Number</string>
+    <string name="enter_name_hint">Your Name</string>
+    <string name="country_code_hint">Country</string>
+    <string name="phone_number_hint">Phone Number</string>
+    <string name="recover_account">Recover Account</string>
+    <string name="enter_otp_hint">Enter OTP</string>
+    <string name="send_otp_button_text">Send OTP</string>
+    <string name="verify_otp_button_text">Verify</string>
+    <string name="condition_text">By logging, You agree to our Terms &amp; Conditions, policies and to receive emails &amp; updates.</string>
+    <string name="not_received_otp_text">Didn\'t receive the OTP ?</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="term_button">Terms &amp; policies</string>
+    <string name="contact_us_button">Contact us</string>
+    <string name="about_us">About us</string>
+
+    <!--for Programming-->
+    <string name="which_was_sent_to_your_mobile_number">Which was sent to your mobile number</string>
+    <string name="default_country_code">🇮🇳  +91</string>
+    <string name="enter_otp_helper_text_1">Please enter the OTP</string>
+    <string name="enter_otp_helper_text_2">OTP should be 6 digit long</string>
+    <string name="enter_otp_helper_text_3">Wrong OTP</string>
+    <string name="otp_is_incorrect">OTP is incorrect</string>
+    <string name="cb_exists">exists</string>
+    <string name="cb_not_exists">not_exists</string>
+    <string name="cb_failed">failed</string>
+    <string name="security_level_0">0</string>
+    <string name="database_not_found_header">Cloud space not connected</string>
+    <string name="database_not_found_sub_header">Cloud space is required to use this service, call the service provider to get this app connected with cloud services.</string>
+    <string name="database_not_found_button_text">Got it</string>
+    <string name="login_complete_header">You are all set !!</string>
+    <string name="login_complete_sub_header">Your account has been created successfully,\nWelcome to the future of Real Estate</string>
+    <string name="login_complete_button_text">Proceed</string>
+
+</resources>

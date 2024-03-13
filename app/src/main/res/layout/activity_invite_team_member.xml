@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_0"
+    tools:context=".InviteTeamMember">
+
+    <include layout="@layout/view_press_back" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="12dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toTopOf="@id/btn_save"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="start"
+                android:paddingHorizontal="12dp"
+                android:text="Team member details"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_client_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                app:boxBackgroundColor="@color/background_1"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxStrokeColor="@color/app_theme_color"
+                app:boxStrokeErrorColor="@color/red_g"
+                app:boxStrokeWidth="0dp"
+                app:errorTextColor="@color/red_g"
+                app:hintTextColor="@color/app_theme_color"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/body"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:gravity="start|center"
+                    android:hint="Member name"
+                    android:inputType="textPersonName|textCapWords"
+                    android:paddingHorizontal="12dp"
+                    android:textColor="@color/text_heading"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_number_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:animateLayoutChanges="true">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_country_code_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:animateLayoutChanges="true"
+                    android:gravity="center"
+                    app:boxBackgroundColor="@color/background_1"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="6dp"
+                    app:boxCornerRadiusBottomStart="6dp"
+                    app:boxCornerRadiusTopEnd="6dp"
+                    app:boxCornerRadiusTopStart="6dp"
+                    app:boxStrokeColor="@color/app_theme_color"
+                    app:boxStrokeErrorColor="@color/red_g"
+                    app:boxStrokeWidth="0dp"
+                    app:errorTextColor="@color/red_g"
+                    app:hintTextColor="@color/app_theme_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/til_client_phone_1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:animateLayoutChanges="true"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:gravity="start|center"
+                        android:hint="@string/country_code_hint"
+                        android:inputType="number"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp"
+                        android:text="@string/default_country_code"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_body"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/iv_open_country_codes_1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@id/til_country_code_1"
+                    app:layout_constraintEnd_toEndOf="@id/til_country_code_1"
+                    app:layout_constraintStart_toStartOf="@id/til_country_code_1"
+                    app:layout_constraintTop_toTopOf="@id/til_country_code_1" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_client_phone_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:animateLayoutChanges="true"
+                    android:gravity="center"
+                    app:boxBackgroundColor="@color/background_1"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="6dp"
+                    app:boxCornerRadiusBottomStart="6dp"
+                    app:boxCornerRadiusTopEnd="6dp"
+                    app:boxCornerRadiusTopStart="6dp"
+                    app:boxStrokeColor="@color/app_theme_color"
+                    app:boxStrokeErrorColor="@color/red_g"
+                    app:boxStrokeWidth="0dp"
+                    app:errorTextColor="@color/red_g"
+                    app:hintTextColor="@color/app_theme_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/til_country_code_1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/body"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:animateLayoutChanges="true"
+                        android:background="@null"
+                        android:gravity="start|center"
+                        android:hint="@string/phone_number_hint"
+                        android:inputType="number"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="8dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_body"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_client_name_tips"
+                style="@style/small"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="12dp"
+                android:drawableEnd="@drawable/vector_info"
+                android:drawableTint="@color/app_theme_color"
+                android:gravity="start|center_vertical"
+                android:text="Members account will be activated only on this number"
+                android:textColor="@color/text_hint"
+                android:textStyle="bold" />
+
+            <include layout="@layout/view_iv_wide_line" />
+
+            <TextView
+                style="@style/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="start"
+                android:paddingHorizontal="12dp"
+                android:text="Basic Permissions"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/text_hint_extra_light" />
+
+            <TextView
+                style="@style/bold_body_when_heading_is_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="start"
+                android:paddingHorizontal="12dp"
+                android:text="View Clients" />
+
+            <TextView
+                style="@style/small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/app_theme_color"
+                android:gravity="start"
+                android:paddingHorizontal="12dp"
+                android:text="Select the types of clients this member can view:" />
+
+            <CheckBox
+                style="@style/body_when_heading_is_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:buttonTint="@color/app_theme_color"
+                android:gravity="start|center"
+                android:text="Clients assigned to him" />
+
+            <CheckBox
+                style="@style/body_when_heading_is_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:buttonTint="@color/app_theme_color"
+                android:gravity="start|center"
+                android:text="Clients assigned to other team members" />
+
+            <CheckBox
+                style="@style/body_when_heading_is_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:buttonTint="@color/app_theme_color"
+                android:gravity="start|center"
+                android:text="All clients you add" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/text_hint_extra_light" />
+
+            <TextView
+                style="@style/bold_body_when_heading_is_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="start"
+                android:paddingHorizontal="12dp"
+                android:text="View Properties" />
+
+            <TextView
+                style="@style/small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/app_theme_color"
+                android:gravity="start"
+                android:paddingHorizontal="12dp"
+                android:text="Select the types of properties this member can view:" />
+
+            <CheckBox
+                style="@style/body_when_heading_is_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:buttonTint="@color/app_theme_color"
+                android:gravity="start|center"
+                android:text="Properties assigned to him" />
+
+            <CheckBox
+                style="@style/body_when_heading_is_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:buttonTint="@color/app_theme_color"
+                android:gravity="start|center"
+                android:text="Properties assigned to other team members" />
+
+            <CheckBox
+                style="@style/body_when_heading_is_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:buttonTint="@color/app_theme_color"
+                android:gravity="start|center"
+                android:text="All properties you add" />
+
+            <include
+                android:id="@+id/iv_wide_line"
+                layout="@layout/view_iv_wide_line"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_show_advance_permissions"
+                style="@style/body_when_heading_is_body"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableEnd="@drawable/vector_arrow_down"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/app_theme_color"
+                android:gravity="center"
+                android:paddingHorizontal="12dp"
+                android:text="Show advance permissions"
+                android:textColor="@color/app_theme_color"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_save"
+        style="@style/body"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="6dp"
+        android:backgroundTint="@color/app_theme_color"
+        android:drawableEnd="@drawable/vector_send"
+        android:drawableTint="@color/background_0"
+        android:gravity="center"
+        android:paddingStart="32dp"
+        android:text="Send Invite"
+        android:textAllCaps="false"
+        android:textColor="@color/background_0"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/prog_save"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toBottomOf="@id/btn_save"
+        app:layout_constraintEnd_toEndOf="@id/btn_save"
+        app:layout_constraintStart_toStartOf="@id/btn_save"
+        app:layout_constraintTop_toTopOf="@id/btn_save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_add_property_text"
+        style="@style/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="6dp"
+        android:drawableEnd="@drawable/vector_cross"
+        android:drawableTint="@color/app_theme_color"
+        android:gravity="start"
+        android:paddingEnd="12dp"
+        android:text="Add Property Details"
+        android:textColor="@color/text_heading"
+        android:textStyle="bold"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_property_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:animateLayoutChanges="true"
+        android:gravity="center"
+        app:boxBackgroundColor="@color/background_0"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="6dp"
+        app:boxCornerRadiusBottomStart="6dp"
+        app:boxCornerRadiusTopEnd="6dp"
+        app:boxCornerRadiusTopStart="6dp"
+        app:boxStrokeColor="@color/app_theme_color"
+        app:boxStrokeErrorColor="@color/red_g"
+        app:boxStrokeWidth="0dp"
+        app:errorTextColor="@color/red_g"
+        app:hintTextAppearance="@style/bold_14_sp"
+        app:hintTextColor="@color/text_heading">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@null"
+            android:backgroundTint="@color/background_1"
+            android:gravity="start|center"
+            android:hint="Property name / Title"
+            android:inputType="textPersonName|textCapWords"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="16dp"
+            android:textColor="@color/text_body" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_property_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            app:boxBackgroundColor="@color/background_1"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="6dp"
+            app:boxCornerRadiusBottomStart="6dp"
+            app:boxCornerRadiusTopEnd="6dp"
+            app:boxCornerRadiusTopStart="6dp"
+            app:boxStrokeColor="@color/app_theme_color"
+            app:boxStrokeErrorColor="@color/red_g"
+            app:boxStrokeWidth="0dp"
+            app:errorTextColor="@color/red_g"
+            app:flow_verticalGap="12dp"
+            app:hintTextAppearance="@style/bold_14_sp"
+            app:hintTextColor="@color/text_heading"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:prefixText="₹   "
+            app:prefixTextAppearance="@style/price_prefix">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="@null"
+                android:gravity="start|center"
+                android:hint="Price"
+                android:inputType="number"
+                android:maxLength="12"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="16dp"
+                android:textAllCaps="false"
+                android:textColor="@color/text_body" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spnr_price_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="-3dp"
+            android:backgroundTint="@color/text_heading"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="@id/til_property_price"
+            app:layout_constraintEnd_toEndOf="@+id/til_property_price"
+            app:layout_constraintTop_toTopOf="@id/til_property_price" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_price_helper"
+        style="@style/small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="start"
+        android:text="@string/price_default_helper"
+        android:textColor="@color/text_body" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_property_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            app:boxBackgroundColor="@color/background_1"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="6dp"
+            app:boxCornerRadiusBottomStart="6dp"
+            app:boxCornerRadiusTopEnd="6dp"
+            app:boxCornerRadiusTopStart="6dp"
+            app:boxStrokeColor="@color/app_theme_color"
+            app:boxStrokeErrorColor="@color/red_g"
+            app:boxStrokeWidth="0dp"
+            app:errorTextColor="@color/red_g"
+            app:hintTextAppearance="@style/body_when_heading_is_body"
+            app:hintTextColor="@color/text_heading"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="@null"
+                android:enabled="false"
+                android:gravity="start|center"
+                android:hint="Location"
+                android:inputType="textPostalAddress|textMultiLine|textCapWords"
+                android:maxLines="4"
+                android:minHeight="50dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="16dp"
+                android:paddingEnd="56dp"
+                android:textColor="@color/text_body" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_4"
+            android:backgroundTint="@color/background_1"
+            android:padding="6dp"
+            android:src="@drawable/img_property_location"
+            app:layout_constraintBottom_toBottomOf="@id/til_property_location"
+            app:layout_constraintEnd_toEndOf="@id/til_property_location"
+            app:layout_constraintTop_toTopOf="@id/til_property_location"
+            app:tint="@color/red_g" />
+
+        <ImageView
+            android:id="@+id/iv_img_location"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/til_property_location"
+            app:layout_constraintEnd_toEndOf="@id/til_property_location"
+            app:layout_constraintStart_toStartOf="@id/til_property_location"
+            app:layout_constraintTop_toTopOf="@id/til_property_location" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_add_image_text"
+        style="@style/body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:text="Add Images"
+        android:textColor="@color/text_heading"
+        android:textStyle="bold" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flb_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        app:flexWrap="wrap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_image_text" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_amenities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="24dp"
+        android:animateLayoutChanges="true"
+        android:gravity="center"
+        app:boxBackgroundColor="@color/background_1"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="6dp"
+        app:boxCornerRadiusBottomStart="6dp"
+        app:boxCornerRadiusTopEnd="6dp"
+        app:boxCornerRadiusTopStart="6dp"
+        app:boxStrokeColor="@color/app_theme_color"
+        app:boxStrokeErrorColor="@color/red_g"
+        app:boxStrokeWidth="0dp"
+        app:errorTextColor="@color/red_g"
+        app:expandedHintEnabled="true"
+        app:hintTextAppearance="@style/body_when_heading_is_body"
+        app:hintTextColor="@color/text_heading"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_more_numbers"
+        app:placeholderText="@string/amenities_placeholder_text"
+        app:placeholderTextAppearance="@style/body_when_heading_is_body"
+        app:placeholderTextColor="@color/text_hint_light">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="start|top"
+            android:hint="@string/amenities"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="6"
+            android:minHeight="120dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="12dp"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:textAllCaps="false"
+            android:textColor="@color/text_body" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_other_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:animateLayoutChanges="true"
+        android:gravity="center"
+        app:boxBackgroundColor="@color/background_1"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="6dp"
+        app:boxCornerRadiusBottomStart="6dp"
+        app:boxCornerRadiusTopEnd="6dp"
+        app:boxCornerRadiusTopStart="6dp"
+        app:boxStrokeColor="@color/app_theme_color"
+        app:boxStrokeErrorColor="@color/red_g"
+        app:boxStrokeWidth="0dp"
+        app:errorTextColor="@color/red_g"
+        app:expandedHintEnabled="true"
+        app:hintTextAppearance="@style/body_when_heading_is_body"
+        app:hintTextColor="@color/text_heading"
+        app:placeholderText="@string/other_placeholder_text"
+        app:placeholderTextAppearance="@style/body_when_heading_is_body"
+        app:placeholderTextColor="@color/text_hint_light">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="start|top"
+            android:hint="@string/other"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="4"
+            android:minHeight="80dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="16dp"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:textAllCaps="false"
+            android:textColor="@color/text_body" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_add_extra_field_for_team"
+        style="@style/bold_body_when_heading_is_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:drawableEnd="@drawable/vector_arrow_down"
+        android:drawableTint="@color/app_theme_color"
+        android:gravity="start|center"
+        android:paddingVertical="3dp"
+        android:text="@string/add_extra_field_heading"
+        android:textColor="@color/app_theme_color" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_0"
+    android:orientation="vertical"
+    tools:context=".TeamMemberOpen">
+
+    <include layout="@layout/view_ll_press_back" />
+
+    <include
+        layout="@layout/view_iv_wide_line"
+        android:layout_width="match_parent"
+        android:layout_height="12dp" />
+
+    <Spinner
+        android:id="@+id/spnr_price_unit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/text_heading"
+        android:gravity="start"
+        android:paddingHorizontal="12dp" />
+
+    <include
+        layout="@layout/view_iv_wide_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_clients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/text_hint_extra_light"
+        android:clipToPadding="false"
+        android:paddingBottom="84dp" />
+
+    <Button
+        style="@style/body"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="6dp"
+        android:backgroundTint="@color/app_theme_color"
+        android:text="Re-Assign more clients"
+        android:textAllCaps="false"
+        android:textColor="@color/background_0" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

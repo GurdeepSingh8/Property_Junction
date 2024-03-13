@@ -1,0 +1,126 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PropertyJunction" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/app_theme_color</item>
+        <item name="colorPrimaryVariant">@color/app_theme_color</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/app_theme_color</item>
+        <item name="colorSecondaryVariant">@color/app_theme_color</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:spotShadowAlpha">0.2</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/background_0</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+
+        <item name="android:navigationBarColor">@color/background_0</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.AppCompat.darkStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:statusBarColor">@color/background_0</item>
+    </style>
+
+    <color name="background_0">#ffffff</color>
+    <color name="background_1">#F5F5F5</color>
+    <color name="google_map_icons">#798F9B</color>
+
+    <color name="text_heading">#141414</color>
+    <color name="text_body">#292929</color>
+    <color name="text_hint">#666666</color>
+    <color name="text_hint_light">#AEAEAE</color>
+    <color name="text_hint_extra_light">#CFCFCF</color>
+    <color name="text_hint_extra_light_max">#E6E6E6</color>
+
+    !--Light google colours no alpha-->
+    <color name="light_blue_g">#DAE8FF</color>
+    <color name="light_red_g">#FFCCCB</color>
+    <color name="light_yellow_g">#f9d38b</color>
+    <color name="light_green_g">#BFF4BE</color>
+
+    <style name="expanded_title_client_name">
+        <item name="android:textColor">@color/text_heading</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="collapsed_title_client_name">
+        <item name="android:textColor">@color/text_heading</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center|start</item>
+    </style>
+
+    <style name="heading">
+        <item name="android:textColor">@color/text_heading</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="body">
+        <item name="android:textColor">@color/text_body</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="body_when_heading_is_body">
+        <item name="android:textColor">@color/text_body</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="bold_body_when_heading_is_body">
+        <item name="android:textColor">@color/text_body</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="small">
+        <item name="android:textColor">@color/text_hint</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+
+    <style name="textUnselected">
+        <item name="android:textColor">@color/text_hint</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="textSelected">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_heading</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="textCatSelected">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/app_theme_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="textCatUnselected">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_hint</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/background_0"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:context=".Dashboard">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cord_add_property"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:animateLayoutChanges="true"
+        android:background="@color/background_1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@color/background_0"
+            android:gravity="bottom|start">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/ctb_upcoming_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlways">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:animateLayoutChanges="true"
+                    android:gravity="center|end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:padding="6dp"
+                        android:paddingStart="12dp"
+                        android:text="@string/app_name" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="10dp"
+                        android:src="@drawable/img_search"
+                        app:tint="@color/text_heading" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="10dp"
+                        android:src="@drawable/img_calender_check"
+                        app:tint="@color/text_heading" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="10dp"
+                        android:src="@drawable/img_more_dots"
+                        app:tint="@color/text_heading" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_clients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/text_hint_extra_light"
+            android:clipToPadding="false"
+            app:layout_anchor="@id/app_bar_layout"
+            app:layout_anchorGravity="bottom"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/app_theme_color"
+        android:padding="6dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/img_house_add"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/background_0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        app:itemBackground="@color/background_0"
+        app:itemRippleColor="@color/app_theme_color"
+        app:itemTextColor="@drawable/bottom_nav_bar_selector"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottom_navigation_main" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="12dp"
+        android:height="12dp"
+        android:gravity="bottom|center_horizontal">
+        <rotate
+            android:fromDegrees="45"
+            android:pivotX="65%"
+            android:pivotY="45%"
+            android:toDegrees="45">
+            <shape android:shape="rectangle">
+                <corners android:bottomRightRadius="2dp" />
+                <solid android:color="@color/google_map_icons" />
+            </shape>
+
+        </rotate>
+    </item>
+
+    <item android:bottom="6dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/google_map_icons" />
+            <corners android:radius="4dp" />
+
+        </shape>
+
+    </item>
+
+
+</layer-list>

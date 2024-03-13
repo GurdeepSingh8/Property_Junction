@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/background_0"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:context=".Team">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cord_add_property"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:animateLayoutChanges="true"
+        android:background="@color/background_1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@color/background_0">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/ctb_upcoming_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlways">
+
+                <include layout="@layout/view_press_back" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/rec_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_0"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="?attr/selectableItemBackground"
+                    android:backgroundTint="@color/background_1"
+                    android:clickable="true"
+                    android:minWidth="60dp"
+                    android:paddingHorizontal="24dp"
+                    android:text="Team" />
+
+                <TextView
+                    style="@style/body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="?attr/selectableItemBackground"
+                    android:backgroundTint="@color/background_1"
+                    android:clickable="true"
+                    android:minWidth="60dp"
+                    android:paddingHorizontal="24dp"
+                    android:text="Groups" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_team"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:background="@color/text_hint_extra_light_max"
+            android:clipToPadding="false"
+            app:layout_anchor="@id/app_bar_layout"
+            app:layout_anchorGravity="bottom"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/row_team_member" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/app_theme_color"
+        android:padding="6dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/img_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/background_0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

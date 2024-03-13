@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/img_team_filled"
+        app:tint="@color/text_body" />
+
+    <TextView
+        android:id="@+id/tv_heading"
+        style="@style/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingHorizontal="12dp"
+        android:text="Welcome to your team"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_body"
+        style="@style/body_when_heading_is_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingHorizontal="48dp"
+        android:text="Invite your teammates to assign them leads, share properties &amp; coordinate on clients." />
+
+    <Button
+        android:id="@+id/btn_action"
+        style="@style/body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/app_theme_color"
+        android:paddingHorizontal="24dp"
+        android:text="Invite Team"
+        android:textAllCaps="false"
+        android:textColor="@color/background_0" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

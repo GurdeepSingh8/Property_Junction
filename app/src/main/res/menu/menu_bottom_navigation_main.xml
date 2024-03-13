@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/img_customer_filled"
+        android:title="Clients" />
+
+    <item
+        android:id="@+id/nav_properties"
+        android:icon="@drawable/img_properties_filled"
+        android:title="Properties" />
+
+    <item
+        android:id="@+id/nav_follow_ups"
+        android:icon="@drawable/img_calender_checked_filled"
+        android:title="Follow Ups" />
+
+    <item
+        android:id="@+id/nav_leads"
+        android:icon="@drawable/img_leads_filled"
+        android:title="leads" />
+
+</menu>

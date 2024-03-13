@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/bottomsheet_background"
+    android:backgroundTint="@color/background_0"
+    android:clipToPadding="false"
+    android:paddingBottom="12dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_4"
+        android:backgroundTint="@color/background_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:adjustViewBounds="true"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toTopOf="@id/tv_head"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/app_theme_color" />
+
+    <TextView
+        android:id="@+id/tv_head"
+        style="@style/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="8dp"
+        android:animateLayoutChanges="true"
+        android:gravity="start"
+        app:layout_constraintBottom_toTopOf="@id/tv_header"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_header"
+        style="@style/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="12dp"
+        android:animateLayoutChanges="true"
+        android:gravity="start"
+        android:textColor="@color/text_body"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/til_note"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:hint="Add Note / Task"
+        app:boxBackgroundColor="@color/background_1"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxStrokeColor="@color/app_theme_color"
+        app:boxStrokeErrorColor="@color/red_g"
+        app:boxStrokeWidth="0dp"
+        app:errorTextColor="@color/red_g"
+        app:expandedHintEnabled="true"
+        app:hintEnabled="true"
+        app:hintTextAppearance="@style/small"
+        app:hintTextColor="@color/app_theme_color"
+        app:layout_constraintBottom_toTopOf="@+id/cons_add_reminder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="top|start"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="6"
+            android:paddingVertical="16dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:textColor="@color/text_body" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_add_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/round_4"
+        android:backgroundTint="@color/background_0"
+        app:layout_constraintBottom_toTopOf="@id/btn_add_followup"
+        app:layout_constraintEnd_toEndOf="@+id/til_note"
+        app:layout_constraintStart_toStartOf="@+id/til_note">
+
+        <TextView
+            android:id="@+id/tv_add_reminder"
+            style="@style/small"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:animateLayoutChanges="true"
+            android:gravity="center|start"
+            android:paddingStart="42dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/app_theme_color"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_cancel_reminder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/round_4"
+            android:backgroundTint="@color/background_0"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_cancel_reminder"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/round_4"
+            android:backgroundTint="@color/background_0"
+            android:padding="8dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/red_g" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/prog_add_followup"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginVertical="4dp"
+        android:animateLayoutChanges="true"
+        android:indeterminate="true"
+        android:indeterminateDuration="600"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_add_followup"
+        app:layout_constraintEnd_toEndOf="@id/btn_add_followup"
+        app:layout_constraintStart_toStartOf="@+id/btn_add_followup"
+        app:layout_constraintTop_toTopOf="@id/btn_add_followup" />
+
+    <Button
+        android:id="@+id/btn_add_followup"
+        style="@style/body"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/round_4"
+        android:backgroundTint="@color/app_theme_color"
+        android:text="Add Followup"
+        android:textColor="@color/background_0"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

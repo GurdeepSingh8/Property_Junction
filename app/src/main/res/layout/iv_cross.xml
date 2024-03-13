@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/iv_cross"
+    android:layout_width="32dp"
+    android:layout_height="32dp"
+    android:layout_gravity="center"
+    android:layout_marginEnd="6dp"
+    android:padding="6dp"
+    android:src="@drawable/vector_cross"
+    app:layout_constraintBottom_toBottomOf="@+id/tv_property_type_text"
+    app:layout_constraintEnd_toEndOf="@id/flb_property_type"
+    app:layout_constraintTop_toTopOf="@+id/tv_property_type_text"
+    app:tint="@color/text_body" />

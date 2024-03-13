@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_grand_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:animateLayoutChanges="true"
+    android:background="@color/background_0"
+    tools:context=".GoogleMapAddress">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_location"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="46dp"
+        android:animateLayoutChanges="true"
+        android:background="@color/background_0"
+        app:layout_constraintBottom_toTopOf="@id/ll_bottom"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <include
+        android:id="@+id/press_bacl"
+        layout="@layout/view_press_back" />
+
+    <EditText
+        android:id="@+id/et_search_address"
+        style="@style/body"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/round_4_holo_for_search"
+        android:gravity="start|center"
+        android:hint="@string/search_address_manually"
+        android:inputType="textPostalAddress"
+        android:maxLines="1"
+        android:paddingHorizontal="40dp"
+        android:textColor="@color/text_body"
+        android:textColorHint="@color/text_hint_light"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_cross"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="9dp"
+        android:src="@drawable/vector_cross"
+        app:layout_constraintBottom_toBottomOf="@id/et_search_address"
+        app:layout_constraintEnd_toEndOf="@id/et_search_address"
+        app:layout_constraintTop_toTopOf="@id/et_search_address"
+        app:tint="@color/red_g" />
+
+    <ImageView
+        android:id="@+id/iv_icon_search"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="6dp"
+        android:src="@drawable/places_ic_search"
+        app:layout_constraintBottom_toBottomOf="@id/et_search_address"
+        app:layout_constraintStart_toStartOf="@id/et_search_address"
+        app:layout_constraintTop_toTopOf="@id/et_search_address"
+        app:tint="@color/app_theme_color" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/places_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_4"
+        android:backgroundTint="@color/background_0"
+        android:maxHeight="480dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/et_search_address" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/background_0"
+        android:clipToPadding="false"
+        android:elevation="12dp"
+        android:gravity="center|bottom"
+        android:onClick="onBottomClick"
+        android:orientation="vertical"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_first_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/iv_location_mark"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="4dp"
+                android:src="@drawable/img_property_location"
+                app:tint="@color/red_g" />
+
+            <TextView
+                android:id="@+id/tv_current_address_main"
+                style="@style/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:minHeight="32dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/tv_edit_address"
+            style="@style/small"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawableEnd="@drawable/vector_arrow_down"
+            android:drawableTint="@color/app_theme_color"
+            android:paddingHorizontal="6dp"
+            android:text="@string/change_location"
+            android:textColor="@color/app_theme_color"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/btn_set_address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_set_address"
+            style="@style/body"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="6dp"
+            android:backgroundTint="@color/app_theme_color"
+            android:text="Set This Location"
+            android:textAllCaps="false"
+            android:textColor="@color/background_0"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/round_4"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@id/ll_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_map"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/lott_tracking_app_theme" />
+
+        <ImageView
+            android:id="@+id/iv_crosshair"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="3dp"
+            android:adjustViewBounds="true"
+            android:padding="6dp"
+            android:src="@drawable/img_crosshair"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_getLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_getLocation"
+            style="@style/small"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="center|start"
+            android:text="@string/use_current_location"
+            android:textColor="@color/text_body"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:elevation="12dp"
+        android:indeterminate="true"
+        android:indeterminateDuration="600"
+        android:indeterminateTint="@color/app_theme_color"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ll_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ll_bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

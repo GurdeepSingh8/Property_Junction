@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "645853702874",
+    "project_id": "associate-65d11",
+    "storage_bucket": "associate-65d11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645853702874:android:5c61119a1d9af037f5d3e3",
+        "android_client_info": {
+          "package_name": "property.junction.co"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645853702874-7a1b3dgcf204iv3uf7fevsesdbat6o07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyjKFgQyxCxQ4mzA608CJwQ-oQ7Kz3klY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645853702874-7a1b3dgcf204iv3uf7fevsesdbat6o07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645853702874:android:d2d20a082a0d72ebf5d3e3",
+        "android_client_info": {
+          "package_name": "upstep.technologies.adminpanelpropertyjunction"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645853702874-7a1b3dgcf204iv3uf7fevsesdbat6o07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyjKFgQyxCxQ4mzA608CJwQ-oQ7Kz3klY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645853702874-7a1b3dgcf204iv3uf7fevsesdbat6o07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645853702874:android:1691544754b83e45f5d3e3",
+        "android_client_info": {
+          "package_name": "upstep.technologies.trackmyclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645853702874-pg41ip4ell71krkc3m5l8difu1lmgft3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "upstep.technologies.trackmyclient",
+            "certificate_hash": "750ec38f1e5e8d98f09c6dfbe30f7df8b8d908e1"
+          }
+        },
+        {
+          "client_id": "645853702874-7a1b3dgcf204iv3uf7fevsesdbat6o07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyjKFgQyxCxQ4mzA608CJwQ-oQ7Kz3klY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645853702874-7a1b3dgcf204iv3uf7fevsesdbat6o07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
